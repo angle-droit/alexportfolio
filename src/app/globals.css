@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 240 14% 95%; /* Light Gray #F0F0F4 */
+    --foreground: 240 10% 10%; /* Dark Gray for text */
+
+    --card: 0 0% 100%; /* White for glassmorphism base */
+    --card-foreground: 240 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 10%;
+
+    --primary: 240 30% 79%; /* Soft Lavender #B5B5DC */
+    --primary-foreground: 240 10% 10%; /* Dark text on lavender */
+
+    --secondary: 240 10% 90%; /* Lighter gray */
+    --secondary-foreground: 240 10% 20%;
+
+    --muted: 240 10% 85%;
+    --muted-foreground: 240 5% 45%;
+
+    --accent: 271 97% 85%; /* Pale Violet #D8B4FE */
+    --accent-foreground: 240 10% 10%; /* Dark text on pale violet */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 10% 88%; /* Subtle border */
+    --input: 240 10% 92%;
+    --ring: 271 97% 85%; /* Accent color for ring */
+
+    --radius: 0.75rem; /* Slightly more rounded for modern feel */
+
+    --sidebar-background: 240 14% 93%; 
+    --sidebar-foreground: 240 10% 20%;
+    --sidebar-primary: 240 30% 79%;
+    --sidebar-primary-foreground: 240 10% 10%;
+    --sidebar-accent: 271 97% 85%;
+    --sidebar-accent-foreground: 240 10% 10%;
+    --sidebar-border: 240 10% 85%;
+    --sidebar-ring: 271 97% 85%;
+  }
+
+  .dark {
+    --background: 240 10% 10%; 
+    --foreground: 240 14% 95%; 
+
+    --card: 240 10% 5%; /* Dark base for glassmorphism */
+    --card-foreground: 240 14% 95%;
+
+    --popover: 240 10% 5%;
+    --popover-foreground: 240 14% 95%;
+
+    --primary: 240 30% 65%; /* Darker Lavender */
+    --primary-foreground: 240 14% 98%; 
+
+    --secondary: 240 10% 25%;
+    --secondary-foreground: 240 14% 90%;
+
+    --muted: 240 10% 20%;
+    --muted-foreground: 240 5% 55%;
+
+    --accent: 271 80% 75%; /* Darker Pale Violet */
+    --accent-foreground: 240 14% 98%; 
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 10% 25%;
+    --input: 240 10% 22%;
+    --ring: 271 80% 75%;
+
+    --sidebar-background: 240 10% 12%;
+    --sidebar-foreground: 240 14% 90%;
+    --sidebar-primary: 240 30% 65%;
+    --sidebar-primary-foreground: 240 14% 98%;
+    --sidebar-accent: 271 80% 75%;
+    --sidebar-accent-foreground: 240 14% 98%;
+    --sidebar-border: 240 10% 20%;
+    --sidebar-ring: 271 80% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    flex-grow: 1;
+  }
+}
+
+/* Custom scrollbar for a more modern look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background) / 0.5);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.7);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
+}
+
+/* Glassmorphism utility */
+.glass-card {
+  @apply bg-card/60 dark:bg-card/40 backdrop-blur-xl border border-white/20 dark:border-white/10 shadow-2xl;
+}
