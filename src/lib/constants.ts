@@ -68,8 +68,8 @@ export const RESUME_INFO = {
   title: "Versatile autodidact | System Administrator",
   summary: "ow-level explorer (Linux, ASM), creator of distributions and system tools, passionate about cybersecurity and systems-oriented development.",
   contact: {
-    email: "pro.axelmertz@gmail.com",
-    phone: "+33 750513159",
+    email: "",
+    phone: "",
     github: "github.com/angle-droit",
     website: "yourportfolio.com"
   },

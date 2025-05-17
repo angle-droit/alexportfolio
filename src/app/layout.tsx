@@ -17,8 +17,8 @@ const geistSans = Geist({ // Corrected instantiation
 // });
 
 export const metadata: Metadata = {
-  title: 'PortfolioPro',
-  description: 'A modern portfolio to showcase skills and projects.',
+  title: 'Alex Portfolio',
+  description: 'Versatile autodidact, low-level explorer (Linux, ASM), creator of distributions and system tools, passionate about cybersecurity and systems-oriented development.',
 };
 
 export default function RootLayout({
