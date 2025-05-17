@@ -12,7 +12,7 @@ export default function HeroSection() {
           <div className="relative w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 rounded-full overflow-hidden shadow-xl border-4 border-primary/50">
             <Image 
               src="https://i.imgur.com/udDPqBW.jpeg" 
-              alt="Your Name" 
+              alt="Axel - Administrateur Système et Créateur de serveurs Minecraft"
               data-ai-hint="professional portrait"
               width={200}
               height={200}

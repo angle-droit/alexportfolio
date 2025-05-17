@@ -10,15 +10,49 @@ const geistSans = Geist({ // Corrected instantiation
   subsets: ['latin'],
 });
 
-// Assuming Geist_Mono might not be used or defined, remove if not needed or ensure correct import
-// const geistMono = Geist_Mono({
-//   variable: '--font-geist-mono',
-//   subsets: ['latin'],
-// });
-
 export const metadata: Metadata = {
-  title: 'Alex Portfolio',
-  description: 'Versatile autodidact, low-level explorer (Linux, ASM), creator of distributions and system tools, passionate about cybersecurity and systems-oriented development.',
+  title: {
+    default: 'Axel - Administrateur Système & Créateur de serveurs Minecraft | Portfolio',
+    template: '%s | Axel - Portfolio',
+  },
+  description: 'Portfolio d\'Axel, administrateur système (Linux, DevOps) et créateur de projets, y compris des serveurs Minecraft. Découvrez mes compétences et réalisations.',
+  keywords: ['administrateur système', 'sysadmin', 'devops', 'linux', 'serveur minecraft', 'minecraft', 'développement système', 'cybersécurité', 'portfolio', 'Axel'],
+  authors: [{ name: 'Axel' }],
+  creator: 'Axel',
+  openGraph: {
+    title: 'Axel - Administrateur Système & Créateur de serveurs Minecraft',
+    description: 'Portfolio d\'Axel, administrateur système et passionné par les serveurs Minecraft.',
+    url: 'https://alexportfolio-pi.vercel.app/', // Replace with your actual domain
+    siteName: 'Portfolio Axel',
+    images: [
+      {
+        url: 'https://i.imgur.com/udDPqBW.jpeg', // Hero image or a general site image
+        width: 200,
+        height: 200,
+        alt: 'Portfolio Axel - Administrateur Système',
+      },
+    ],
+    locale: 'fr_FR',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Axel - Administrateur Système & Créateur de serveurs Minecraft',
+    description: 'Découvrez les projets et compétences d\'Axel, administrateur système et créateur de serveurs Minecraft.',
+    // creator: '@yourtwitterhandle', // Replace with your Twitter handle if you have one
+    images: ['https://i.imgur.com/udDPqBW.jpeg'], // Hero image or a general site image
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -27,7 +61,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="fr" className="dark" suppressHydrationWarning>
       <body className={`${geistSans.variable} antialiased flex flex-col min-h-screen`}>
         <Header />
         <main className="flex-grow container mx-auto px-4 py-8">
